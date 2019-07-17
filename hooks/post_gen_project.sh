@@ -1,4 +1,5 @@
 #!/bin/bash
+mkdir assets/
 wget {{cookiecutter.image_url}} -O assets/{{cookiecutter.pid}}.jpg
 git clone {{cookiecutter.github_repo_url}} github_repo
 cd github_repo
