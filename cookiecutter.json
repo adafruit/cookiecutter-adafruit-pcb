@@ -5,4 +5,5 @@
 	"github_repo_url" : "https://www.github.com/adafruit/Adafruit-INA260-PCB",
 	"description" : "INSERT PRODUCT COPY HERE",
 	"image_url" : "https://cdn-shop.adafruit.com/1200x900/{{cookiecutter.pid}}-01.jpg"
+	"designer" : "Limor Fried/Ladyada"
 }
