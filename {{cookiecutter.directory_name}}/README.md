@@ -10,7 +10,7 @@ Format is EagleCAD schematic and board layout
 
 ### Description
 
-{{cookiecutter.description}}
+{{cookiecutter.product_copy}}
 
 ### License
 

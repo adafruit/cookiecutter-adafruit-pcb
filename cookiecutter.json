@@ -1,9 +1,12 @@
 {
-	"pid" : "4226",
-	"directory_name" : "{{cookiecutter.pid}}_pcb",
-	"product_name":"INA260 High or Low Side Current and Power Sensor",
-	"github_repo_url" : "https://www.github.com/adafruit/Adafruit-INA260-PCB",
-	"description" : "INSERT PRODUCT COPY HERE",
+	"pid" : "0",
+	"sensor_name" : "",
+	"directory_name" : "{{cookiecutter.sensor_name}}_pcb",
+	"sensor_description" : "Sensor",
+	"product_name": "{{cookiecutter.sensor_name}} {{cookiecutter.sensor_description}}",
+	"repo_name" : "Adafruit-{{cookiecutter.sensor_name}}-PCB",
+	"github_repo_url" : "git@github.com:adafruit/{{cookiecutter.repo_name}}.git",
+	"product_copy" : "INSERT PRODUCT COPY HERE",
 	"image_url" : "https://cdn-shop.adafruit.com/1200x900/{{cookiecutter.pid}}-01.jpg",
 	"designer" : "Limor Fried/Ladyada"
 }
