@@ -2,7 +2,7 @@
 mkdir assets/
 # make idempotent
 pwd
-python3 `which create_repo.py` {{cookiecutter.repo_name}} --YES
+python3 `which mkrepo` {{cookiecutter.repo_name}} --YES
 
 # is this the same as cloning?
 git init .
