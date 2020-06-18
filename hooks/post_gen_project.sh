@@ -18,15 +18,13 @@ git add license.txt
 git add assets
 
 # copy over files
-sch_path=`find -s ~/boards/MBAdafruitBoards/ -type f -name '*{{cookiecutter.sensor_name}}*.sch'|tail -1`
-brd_path="${sch_path/sch/brd}"
+echo 'cp {{cookiecutter.eagle_file_directory}}/*{{cookiecutter.sensor_name}}*.brd ./Adafruit_{{cookiecutter.sensor_name}}.brd'
+echo 'cp {{cookiecutter.eagle_file_directory}}/*{{cookiecutter.sensor_name}}*.sch ./Adafruit_{{cookiecutter.sensor_name}}.sch'
+cp {{cookiecutter.eagle_file_directory}}/*{{cookiecutter.sensor_name}}*.brd ./Adafruit_{{cookiecutter.sensor_name}}.brd
+cp {{cookiecutter.eagle_file_directory}}/*{{cookiecutter.sensor_name}}*.sch ./Adafruit_{{cookiecutter.sensor_name}}.sch
 
-cp "$sch_path" ./Adafruit_{{cookiecutter.sensor_name}}.sch
-cp "$brd_path" ./Adafruit_{{cookiecutter.sensor_name}}.brd
 echo "Copied over"
-echo $sch_path
 echo and
-echo $brd_path
 echo "Make sure they're the correct version!"
 
 git add *.sch *.brd

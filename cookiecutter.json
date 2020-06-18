@@ -1,12 +1,13 @@
 {
-	"pid" : "0",
-	"sensor_name" : "",
-	"directory_name" : "{{cookiecutter.sensor_name}}_pcb",
-	"sensor_description" : "Sensor",
-	"product_name": "{{cookiecutter.sensor_name}} {{cookiecutter.sensor_description}}",
-	"repo_name" : "Adafruit-{{cookiecutter.sensor_name}}-PCB",
-	"github_repo_url" : "git@github.com:adafruit/{{cookiecutter.repo_name}}.git",
-	"product_copy" : "INSERT PRODUCT COPY HERE",
-	"image_url" : "https://cdn-shop.adafruit.com/1200x900/{{cookiecutter.pid}}-01.jpg",
+  "pid" : "0",
+  "sensor_name" : "",
+  "directory_name" : "{{cookiecutter.sensor_name}}_pcb",
+  "sensor_description" : "Sensor",
+  "product_name": "{{cookiecutter.sensor_name}} {{cookiecutter.sensor_description}}",
+  "repo_name" : "Adafruit-{{cookiecutter.sensor_name}}-PCB",
+  "github_repo_url" : "git@github.com:adafruit/{{cookiecutter.repo_name}}.git",
+  "product_copy" : "INSERT PRODUCT COPY HERE",
+  "image_url" : "https://cdn-shop.adafruit.com/1200x900/{{cookiecutter.pid}}-01.jpg",
+  "eagle_file_directory": "",
 	"designer" : "Limor Fried/Ladyada"
 }
