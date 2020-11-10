@@ -6,9 +6,10 @@ python3 `which mkrepo` {{cookiecutter.repo_name}} --YES
 
 # is this the same as cloning?
 git init .
+git checkout -b main
 git remote add adafruit {{cookiecutter.github_repo_url}}
 git fetch adafruit
-git merge adafruit/master
+git merge adafruit/main
 
 # add stuff
 wget {{cookiecutter.image_url}} -O assets/{{cookiecutter.pid}}.jpg
