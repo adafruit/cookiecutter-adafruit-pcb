@@ -19,10 +19,10 @@ git add license.txt
 git add assets
 
 # copy over files
-echo 'cp {{cookiecutter.eagle_file_directory}}/*{{cookiecutter.sensor_name}}*.brd ./Adafruit_{{cookiecutter.sensor_name}}.brd'
-echo 'cp {{cookiecutter.eagle_file_directory}}/*{{cookiecutter.sensor_name}}*.sch ./Adafruit_{{cookiecutter.sensor_name}}.sch'
-cp {{cookiecutter.eagle_file_directory}}/*{{cookiecutter.sensor_name}}*.brd ./Adafruit_{{cookiecutter.sensor_name}}.brd
-cp {{cookiecutter.eagle_file_directory}}/*{{cookiecutter.sensor_name}}*.sch ./Adafruit_{{cookiecutter.sensor_name}}.sch
+echo 'cp {{cookiecutter.eagle_file_directory}}/*{{cookiecutter.product_name}}*.brd ./Adafruit_{{cookiecutter.product_name}}.brd'
+echo 'cp {{cookiecutter.eagle_file_directory}}/*{{cookiecutter.product_name}}*.sch ./Adafruit_{{cookiecutter.product_name}}.sch'
+cp {{cookiecutter.eagle_file_directory}}/*{{cookiecutter.product_name}}*.brd ./Adafruit_{{cookiecutter.product_name}}.brd
+cp {{cookiecutter.eagle_file_directory}}/*{{cookiecutter.product_name}}*.sch ./Adafruit_{{cookiecutter.product_name}}.sch
 
 echo "Copied over"
 echo and
