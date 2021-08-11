@@ -15,7 +15,7 @@ You will be prompted for some info:
  * `directory_name [000_pcb]`: The directory that the cookie cutter will create, with the github repo checked out inside
  * `product_description []`: The type of sensor, like 'Current Sensor' or '3-axis Accelerometer', or the rest of the product name
  * `full_name [<sensor_name> <sensor_description>]`: The name of the product, without "Adafruit". Automatically generated from product name and description.
- * `repo_name [Adafruit-<sensor_name>-PCB]: The name of the repository
+ * `repo_name [Adafruit-<sensor_name>-PCB]`: The name of the repository
  * `github_repo_url [https://www.github.com/adafruit/<repo_name>]`: Self explanitory; copy either the SSH or HTTPS url from the repo
  * `description [INSERT PRODUCT COPY HERE]`: If there is a small amount of copy for the description, you can paste it here. Does not handle multi-line input so most times I use the default and manually paste it in
  * `image_url [https://cdn-shop.adafruit.com/1200x900/<pid>-01.jpg]`: A full-res product photo showing the top of the board with pin labels, etc.
