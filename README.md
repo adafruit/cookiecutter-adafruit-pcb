@@ -10,15 +10,16 @@ You'll need:
 Run like so: `cookiecutter gh:adafruit/cookiecutter-adafruit-pcb`
 
 You will be prompted for some info:
- * `pid [000]`: The Product id of the product (http://www.adafruit.com/product/PRODUCT_ID)
- * `sensor_name[]`: The name of the sensor, like LIS3DH or INA260
+ * `pid [0]`: The Product id of the product (http://www.adafruit.com/product/PRODUCT_ID)
+ * `product_name[]`: The name of the product, like LIS3DH, INA260, or QT Py RP2040
  * `directory_name [000_pcb]`: The directory that the cookie cutter will create, with the github repo checked out inside
- * `sensor_description [Sensor]`: The type of sensor, like 'Current Sensor' or '3-axis Accelerometer'
- * `product_name [<sensor_name> <sensor_description>]`: The name of the product, without "Adafruit".
+ * `product_description []`: The type of sensor, like 'Current Sensor' or '3-axis Accelerometer', or the rest of the product name
+ * `full_name [<sensor_name> <sensor_description>]`: The name of the product, without "Adafruit". Automatically generated from product name and description.
  * `repo_name [Adafruit-<sensor_name>-PCB]: The name of the repository
  * `github_repo_url [https://www.github.com/adafruit/<repo_name>]`: Self explanitory; copy either the SSH or HTTPS url from the repo
  * `description [INSERT PRODUCT COPY HERE]`: If there is a small amount of copy for the description, you can paste it here. Does not handle multi-line input so most times I use the default and manually paste it in
- * image_url [https://cdn-shop.adafruit.com/1200x900/<pid>-01.jpg]: A full-res product photo showing the top of the board with pin labels, etc.
+ * `image_url [https://cdn-shop.adafruit.com/1200x900/<pid>-01.jpg]`: A full-res product photo showing the top of the board with pin labels, etc.
+ * `eagle_file_directory []`: Typically left blank.
  * `designer [Limor Fried/Ladyada]` : The name of the person who designed the PCB
 
 You'll be left with a new directory that has some files generated in it as well as a checkout of the given repo with the title `github_repo`. The post-generation hook will have already copied the assets directory with the image as well as the license.txt and the updated README.md into the github directory as well as `git add`ing them
