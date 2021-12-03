@@ -4,7 +4,7 @@ This is a cookiecutter template for generating GitHub repos for Adafruit PCB fil
 Requirements:
  * Cookiecutter (`pip install cookiecutter`)
  * The Product page open
- * The github repo open in a browser
+ * The GitHub repo open in a browser
  * Git - `git`
 
 #### Running cookiecutter
