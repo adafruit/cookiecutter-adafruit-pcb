@@ -1,13 +1,15 @@
 {
+  "dev_board" : "n",
   "pid" : "0",
   "product_name": "",
   "directory_name" : "{{cookiecutter.product_name | replace(' ', '_')}}_pcb",
-  "product_description" : "",
-  "full_name": "{{cookiecutter.product_name}}{% if cookiecutter.product_description %} {% endif %}{{cookiecutter.product_description}}",
+  "product_name_description" : "",
+  "full_name": "{{cookiecutter.product_name}}{% if cookiecutter.product_name_description %} {% endif %}{{cookiecutter.product_name_description}}",
   "repo_name" : "Adafruit-{{cookiecutter.product_name | replace(' ', '-')}}-PCB",
   "github_repo_url" : "git@github.com:adafruit/{{cookiecutter.repo_name}}.git",
   "product_copy" : "INSERT PRODUCT COPY HERE",
   "image_url" : "https://cdn-shop.adafruit.com/1200x900/{{cookiecutter.pid}}-01.jpg",
-  "eagle_file_directory": "",
-	"designer" : "Limor Fried/Ladyada"
+  "board_file_name" : "",
+  "board_file_directory": "",
+  "designer" : "Limor Fried/Ladyada"
 }

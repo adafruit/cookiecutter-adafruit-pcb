@@ -1,40 +1,59 @@
-## Adafruit PCB Repo Cookiecutter
-This is a Cookiecutter template for github repos for Adafruit PCB files.
+## Adafruit PCB Repo cookiecutter
+This is a cookiecutter template for generating GitHub repos for Adafruit PCB files.
 
-You'll need:
+Requirements:
  * Cookiecutter (`pip install cookiecutter`)
  * The Product page open
  * The github repo open in a browser
- * `git`
+ * Git - `git`
 
-Run like so: `cookiecutter gh:adafruit/cookiecutter-adafruit-pcb`
+#### Running cookiecutter
+Run as follows: `cookiecutter gh:adafruit/cookiecutter-adafruit-pcb`
 
-You will be prompted for some info:
- * `pid [0]`: The Product id of the product (http://www.adafruit.com/product/PRODUCT_ID)
- * `product_name[]`: The name of the product, like LIS3DH, INA260, or QT Py RP2040
- * `directory_name [000_pcb]`: The directory that the cookie cutter will create, with the github repo checked out inside
- * `product_description []`: The type of sensor, like 'Current Sensor' or '3-axis Accelerometer', or the rest of the product name
- * `full_name [<sensor_name> <sensor_description>]`: The name of the product, without "Adafruit". Automatically generated from product name and description.
- * `repo_name [Adafruit-<sensor_name>-PCB]`: The name of the repository
- * `github_repo_url [https://www.github.com/adafruit/<repo_name>]`: Self explanitory; copy either the SSH or HTTPS url from the repo
- * `description [INSERT PRODUCT COPY HERE]`: If there is a small amount of copy for the description, you can paste it here. Does not handle multi-line input so most times I use the default and manually paste it in
+When asked the following, continue with the default of `yes`:
+```
+You've downloaded /Users/kattni/.cookiecutters/cookiecutter-adafruit-pcb before. Is it okay to delete and re-download it? [yes]:
+```
+
+#### cookiecutter Prompts
+You will be prompted for the following info:
+ * `dev_board [n]`: Is this a microcontroller/dev board? Answer `y`/`yes` or `n`/`no`. Defaults to `n`.
+ * `pid [0]`: The product id of the product, as found on adafruit.com, i.e. http://www.adafruit.com/product/PRODUCT_ID.
+ * `product_name[]`: The basic name of the product, as in the sensor name like `LIS3DH`, or the dev board name like `QT Py RP2040`.
+ * `directory_name [000_pcb]`: The local directory created by cookiecutter. Will contain the Git repo.
+ * `product_name_description []`: The rest of the product name. For example, the type of sensor, like 'Current Sensor' or '3-axis Accelerometer'.
+ * `full_name [<sensor_name> <sensor_description>]`: The name of the product, without "Adafruit". Automatically generated from product name and product description.
+ * `repo_name [Adafruit-<sensor_name>-PCB]`: The name of the GitHub repository
+ * `github_repo_url [https://www.github.com/adafruit/<repo_name>]`: Either the SSH or HTTPS url from the repo
+ * `description [INSERT PRODUCT COPY HERE]`: If there is a small amount of copy for the description, you can paste it here. Does not handle multi-line input! In that case, leave blank, and manually edit resulting README.
  * `image_url [https://cdn-shop.adafruit.com/1200x900/<pid>-01.jpg]`: A full-res product photo showing the top of the board with pin labels, etc.
- * `eagle_file_directory []`: Typically left blank.
+ * `board_file_name []`: The exact name of the board file in the boards repo, e.g. `ESP32-S2\ Rev\ C`. Can be left blank.
+ * `board_file_directory []`: The exact path to the board file indicated by name above. Can be left blank.
  * `designer [Limor Fried/Ladyada]` : The name of the person who designed the PCB
 
-You'll be left with a new directory that has some files generated in it as well as a checkout of the given repo with the title `github_repo`. The post-generation hook will have already copied the assets directory with the image as well as the license.txt and the updated README.md into the github directory as well as `git add`ing them
+The result is a new directory containing the generated files as well as a checkout of the given repo with the title `github_repo`.
 
-Move into the repo directory, open the `README.md` and edit the description copy as needed. I tend to copy it from the product page, bolding and creating links as needed
+#### Final steps
+Open the repo directory, open the `README.md` and edit the description copy as needed.
 
-When done editing, `git add README.md`, `git commit -m"updated repo to use adafruit pcb repo cookiecutter"`, `git push`
+When done editing, `git add .`, `git commit -m "Adding board files."`, `git push adafruit main`
 
-Reload the repo in the browser and you should see the new changes, make, commit, push edits as needed
+Reload the repo in the browser, and you should see the new changes. Make, commit, push edits as needed.
 
-Once you're done you may choose to keep the directory that cookiecutter created in case you later want to go back into the repo to make changes
+Keeping the directory once it is completed is optional.
+
+#### Post-Generation Hook Details
+The post-generation hook does the following:
+ * Copies the assets directory with the image
+ * Removes the factory-reset directory if the board is not a microcontroller/dev board
+ * Moves the license.txt and the generated README into the new directory
+ * If provided properly, uses the board file name and directory to copy and properly rename the board files
+ * `git add`s all of the existing files
+
 ### License
 
 Adafruit invests time and resources providing this open source design, please support Adafruit and open-source hardware by purchasing products from [Adafruit](https://www.adafruit.com)!
 
-Written by Bryan Siepert for Adafruit Industries.
+Written by Bryan Siepert, Kattni Rembor for Adafruit Industries.
 
 Creative Commons Attribution/Share-Alike, all text above must be included in any redistribution. See license.txt for additional details.

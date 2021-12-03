@@ -4,31 +4,31 @@ mkdir assets/
 pwd
 python3 `which mkrepo` {{cookiecutter.repo_name}} --YES
 
-# is this the same as cloning?
+# Remove factory-reset if not needed
+{% if cookiecutter.dev_board in ['n', 'no'] %}rm -rf factory-reset{% endif %}
+
+# Setup repo
 git init .
 git checkout -b main
 git remote add adafruit {{cookiecutter.github_repo_url}}
 git fetch adafruit
 git merge adafruit/main
 
-# add stuff
+# Add content
 wget {{cookiecutter.image_url}} -O assets/{{cookiecutter.pid}}.jpg
 git rm readme.txt
-git add README.md
-git add license.txt
-git add assets
 
 # copy over files
-echo 'cp {{cookiecutter.eagle_file_directory}}/*{{cookiecutter.product_name}}*.brd ./Adafruit_{{cookiecutter.product_name}}.brd'
-echo 'cp {{cookiecutter.eagle_file_directory}}/*{{cookiecutter.product_name}}*.sch ./Adafruit_{{cookiecutter.product_name}}.sch'
-cp {{cookiecutter.eagle_file_directory}}/*{{cookiecutter.product_name}}*.brd ./Adafruit_{{cookiecutter.product_name}}.brd
-cp {{cookiecutter.eagle_file_directory}}/*{{cookiecutter.product_name}}*.sch ./Adafruit_{{cookiecutter.product_name}}.sch
+echo 'cp {{cookiecutter.board_file_directory}}/{{cookiecutter.board_file_name}}.brd ./Adafruit_{{cookiecutter.product_name}}.brd'
+echo 'cp {{cookiecutter.board_file_directory}}/{{cookiecutter.board_file_name}}.sch ./Adafruit_{{cookiecutter.product_name}}.sch'
+cp {{cookiecutter.board_file_directory}}/*{{cookiecutter.board_file_name}}*.brd ./Adafruit_{{cookiecutter.product_name}}.brd
+cp {{cookiecutter.board_file_directory}}/*{{cookiecutter.board_file_name}}*.sch ./Adafruit_{{cookiecutter.product_name}}.sch
 
 echo "Copied over"
 echo and
 echo "Make sure they're the correct version!"
 
-git add *.sch *.brd
+git add .
 echo "DONE! Review, make changes, git add, push!"
 
 
