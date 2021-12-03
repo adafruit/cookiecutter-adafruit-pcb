@@ -34,7 +34,10 @@ You will be prompted for the following info:
 The result is a new directory containing the generated files as well as a checkout of the given repo with the title `github_repo`.
 
 #### Final steps
-Open the repo directory, open the `README.md` and edit the description copy as needed.
+Open the repo directory, open the main `README.md` and edit the product copy as needed.
+
+In the case of a microcontroller/dev board, obtain and include a factory reset .uf2 or .bin file in the
+`factory-reset` directory.
 
 When done editing, `git add .`, `git commit -m "Adding board files."`, `git push adafruit main`
 
