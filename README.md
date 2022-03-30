@@ -12,7 +12,7 @@ Run as follows: `cookiecutter gh:adafruit/cookiecutter-adafruit-pcb`
 
 When asked the following, continue with the default of `yes`:
 ```
-You've downloaded /Users/kattni/.cookiecutters/cookiecutter-adafruit-pcb before. Is it okay to delete and re-download it? [yes]:
+You've downloaded /Users/username/.cookiecutters/cookiecutter-adafruit-pcb before. Is it okay to delete and re-download it? [yes]:
 ```
 
 #### cookiecutter Prompts
