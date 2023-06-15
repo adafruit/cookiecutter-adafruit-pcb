@@ -11,8 +11,8 @@ check_for_program () {
 # Check for `git`
 check_for_program git
 
-# Check for `python3`
-check_for_program python3
+# Check for `gh` CLI
+check_for_program gh
 
 # Check for `wget`
 check_for_program wget
