@@ -7,7 +7,7 @@ mkdir assets/
 pwd
 
 # Create the GitHub repository
-gh repo create adafruit/{{ cookiecutter.repo_name }} --public
+gh repo create adafruit/{{ cookiecutter.repo_name }} -d "PCB files for {{ cookiecutter.full-name }}." --public
 if [ $? != 0 ]; then
     echo "Failed to create repo on GitHub."
     echo "Please check the following:"
